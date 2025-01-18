@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 
 interface SocialMediaLink {
-  platform: "facebook" | "instagram" | "twitter"; // Strict union type
+  platform: string; // Strict union type
   url: string;
 }
 
@@ -11,7 +11,7 @@ interface CardMentorsProps {
   name: string;
   profession: string;
   image: string;
-  socialLinks: SocialMediaLink[];
+  socialLinks: readonly SocialMediaLink[];
 }
 
 const CardMentors: React.FC<CardMentorsProps> = ({
