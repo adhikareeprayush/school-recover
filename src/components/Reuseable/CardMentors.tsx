@@ -1,22 +1,67 @@
-import { FaFacebook } from "react-icons/fa";
+import React from "react";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
-import { FaTwitter } from "react-icons/fa";
 
-const CardMentors = () => {
+interface SocialMediaLink {
+  platform: "facebook" | "instagram" | "twitter"; // Strict union type
+  url: string;
+}
+
+interface CardMentorsProps {
+  name: string;
+  profession: string;
+  image: string;
+  socialLinks: SocialMediaLink[];
+}
+
+const CardMentors: React.FC<CardMentorsProps> = ({
+  name,
+  profession,
+  image,
+  socialLinks,
+}) => {
+  // Map social media links to respective icons
+  const renderSocialIcon = (platform: SocialMediaLink["platform"]) => {
+    switch (platform) {
+      case "facebook":
+        return <FaFacebook className="text-[24px] text-primary" />;
+      case "instagram":
+        return <IoLogoInstagram className="text-[24px] text-primary" />;
+      case "twitter":
+        return <FaTwitter className="text-[24px] text-primary" />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="flex flex-col rounded-[20px] bg-white accentuedDropShadow overflow-hidden">
+      {/* Mentor Image */}
       <img
-        src="https://media.licdn.com/dms/image/v2/D4D03AQHrT6zBAnondQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727031609722?e=1742428800&v=beta&t=LmkU48mTTwZrGzZ0FAg5ZbxGCh9lOfDz6ZQx3pcaA-E"
-        alt=""
+        src={image}
+        alt={`${name}'s avatar`}
         className="h-[230px] w-[238px] object-cover"
       />
+
       <div className="flex flex-col p-[30px] gap-[10px] items-center justify-center">
-        <h5 className="text-center text-text">Julian Jameson</h5>
-        <span className="small text-secondText text-center">Profession</span>
+        {/* Mentor Name */}
+        <h5 className="text-center text-text">{name}</h5>
+
+        {/* Mentor Profession */}
+        <span className="small text-secondText text-center">{profession}</span>
+
+        {/* Social Media Links */}
         <div className="flex items-center gap-[20px]">
-          <FaFacebook className="text-[24px] text-primary" />
-          <IoLogoInstagram className="text-[24px] text-primary" />
-          <FaTwitter className="text-[24px] text-primary" />
+          {socialLinks.map((link, index) => (
+            <a
+              href={link.url}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {renderSocialIcon(link.platform)}
+            </a>
+          ))}
         </div>
       </div>
     </div>

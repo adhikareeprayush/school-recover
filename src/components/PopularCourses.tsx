@@ -1,4 +1,51 @@
 import CardMentors from "./Reuseable/CardMentors";
+import mentor1 from "../assets/mentor1.jpeg";
+import mentor2 from "../assets/mentor2.jpeg";
+import mentor3 from "../assets/mentor3.jpeg";
+import mentor4 from "../assets/mentor4.jpeg";
+
+const mentors = [
+  {
+    name: "John Doe",
+    profession: "CEO, Company A",
+    image: mentor1,
+    socialLinks: [
+      { platform: "facebook", url: "https://facebook.com" },
+      { platform: "instagram", url: "https://instagram.com" },
+      { platform: "twitter", url: "https://twitter.com" },
+    ],
+  },
+  {
+    name: "Jane Smith",
+    profession: "CTO, Company B",
+    image: mentor2,
+    socialLinks: [
+      { platform: "facebook", url: "https://facebook.com" },
+      { platform: "instagram", url: "https://instagram.com" },
+      { platform: "twitter", url: "https://twitter.com" },
+    ],
+  },
+  {
+    name: "Alice Johnson",
+    profession: "CFO, Company C",
+    image: mentor3,
+    socialLinks: [
+      { platform: "facebook", url: "https://facebook.com" },
+      { platform: "instagram", url: "https://instagram.com" },
+      { platform: "twitter", url: "https://twitter.com" },
+    ],
+  },
+  {
+    name: "Bob Brown",
+    profession: "COO, Company D",
+    image: mentor4,
+    socialLinks: [
+      { platform: "facebook", url: "https://facebook.com" },
+      { platform: "instagram", url: "https://instagram.com" },
+      { platform: "twitter", url: "https://twitter.com" },
+    ],
+  },
+] as const;
 
 const PopularCourses = () => {
   return (
@@ -12,10 +59,9 @@ const PopularCourses = () => {
         </p>
       </div>
       <div className="flex gap-[30px] items-center justify-between">
-        <CardMentors />
-        <CardMentors />
-        <CardMentors />
-        <CardMentors />
+        {mentors.map((card, index) => (
+          <CardMentors key={index} {...card} />
+        ))}
       </div>
     </section>
   );

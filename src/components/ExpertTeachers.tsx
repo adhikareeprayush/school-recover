@@ -1,4 +1,40 @@
 import TeacherCard from "./Reuseable/TeacherCard";
+import expert1 from "../assets/experts1.jpeg";
+import expert2 from "../assets/experts2.jpeg";
+import expert3 from "../assets/experts3.jpeg";
+
+const teacherCards = [
+  {
+    image: expert1,
+    title: "Get Quality Education",
+    description:
+      "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    sales: 12,
+    price: 16.48,
+    discountPrice: 6.48,
+    rating: 4.9,
+  },
+  {
+    image: expert2,
+    title: "Get Quality Education",
+    description:
+      "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    sales: 12,
+    price: 16.48,
+    discountPrice: 6.48,
+    rating: 4.9,
+  },
+  {
+    image: expert3,
+    title: "Get Quality Education",
+    description:
+      "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    sales: 12,
+    price: 16.48,
+    discountPrice: 6.48,
+    rating: 4.9,
+  },
+];
 
 const ExpertTeachers = () => {
   return (
@@ -12,9 +48,9 @@ const ExpertTeachers = () => {
         </p>
       </div>
       <div className="flex items-center gap-[30px] justify-between">
-        <TeacherCard />
-        <TeacherCard />
-        <TeacherCard />
+        {teacherCards.map((card, index) => (
+          <TeacherCard key={index} {...card} />
+        ))}
       </div>
     </section>
   );

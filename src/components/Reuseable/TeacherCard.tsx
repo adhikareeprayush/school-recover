@@ -1,16 +1,38 @@
+import React from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { HiMiniChevronRight } from "react-icons/hi2";
+import { BsCart2 } from "react-icons/bs";
+import { FaEye } from "react-icons/fa";
 
-const TeacherCard = () => {
+// Define prop types for TeacherCard
+interface TeacherCardProps {
+  image: string; // URL of the image
+  title: string;
+  description: string;
+  rating: number;
+  sales: number;
+  price: number;
+  discountPrice: number;
+}
+
+const TeacherCard: React.FC<TeacherCardProps> = ({
+  image,
+  title,
+  description,
+  rating,
+  sales,
+  price,
+  discountPrice,
+}) => {
   return (
     <div className="flex flex-col bg-white w-[348px]">
       <div className="image-container relative">
         <img
           className="w-full h-[300px] object-cover"
-          src="https://media.licdn.com/dms/image/v2/D4D03AQHrT6zBAnondQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727031609722?e=1742428800&v=beta&t=LmkU48mTTwZrGzZ0FAg5ZbxGCh9lOfDz6ZQx3pcaA-E"
-          alt=""
+          src={image}
+          alt={title}
         />
         <div className="px-[10px] bg-danger text-white absolute top-2 left-2 rounded-[3px] border-0 lightDropShadow">
           <h6 className="w-fit">Sale</h6>
@@ -20,10 +42,10 @@ const TeacherCard = () => {
             <IoMdHeartEmpty className=" text-[20px]" />
           </span>
           <span className="bg-white rounded-full p-[10px]">
-            <IoMdHeartEmpty className=" text-[20px]" />
+            <BsCart2 className=" text-[20px]" />
           </span>
           <span className="bg-white rounded-full p-[10px]">
-            <IoMdHeartEmpty className=" text-[20px]" />
+            <FaEye className=" text-[20px]" />
           </span>
         </div>
       </div>
@@ -32,21 +54,18 @@ const TeacherCard = () => {
           <span className="link text-primary">Training Courses</span>
           <div className="flex items-center bg-text p-[5px] rounded-full gap-[5px]">
             <MdOutlineStarPurple500 className="text-[16px] text-secondary" />
-            <span className="text-white small">4.5</span>
+            <span className="text-white small">{rating.toFixed(1)}</span>
           </div>
         </div>
-        <h5 className="text-text">Get Quality Education</h5>
-        <p className="text-secondText">
-          We focus on ergonomics and meeting you where you work. It's only a
-          keystroke away.
-        </p>
+        <h5 className="text-text">{title}</h5>
+        <p className="text-secondText">{description}</p>
         <div className="flex items-center gap-[10px]">
           <MdOutlineFileDownload className="text-[24px]" />
-          <h6 className="text-secondText">15 Sales</h6>
+          <h6 className="text-secondText">{sales} Sales</h6>
         </div>
         <div className="flex items-center gap-[10px]">
-          <h5 className="text-muted">$16.48</h5>
-          <h5 className="text-secondary">$6.48</h5>
+          <h5 className="text-muted">${price.toFixed(2)}</h5>
+          <h5 className="text-secondary">${discountPrice.toFixed(2)}</h5>
         </div>
         <button className="px-[20px] py-[10px] rounded-[37px] border-[1px] border-primary text-primary flex items-center gap-[10px] justify-center w-fit">
           <h6>Learn More</h6>
