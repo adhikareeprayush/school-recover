@@ -3,7 +3,7 @@ import thumbnailClientMatters from "../assets/thumb-concept-7.svg";
 
 const ClientMatters = () => {
   return (
-    <section className="flex items-center justify-between">
+    <section className="flex items-center justify-between flex-wrap">
       <div className="flex flex-col gap-[35px]">
         <hr className="w-[94px] h-[7px] bg-danger" />
         <h2 className="text-text">Every Client Matters</h2>
@@ -19,7 +19,7 @@ const ClientMatters = () => {
       <img
         src={thumbnailClientMatters}
         alt=""
-        className="w-[600px] h-[600px]"
+        className="max-w-[600px] w-full h-[600px]"
       />
     </section>
   );

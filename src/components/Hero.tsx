@@ -7,7 +7,7 @@ import { MdBook } from "react-icons/md";
 const Hero = () => {
   return (
     <section className="flex flex-col relative gap-[60px]">
-      <div className="flex flex-col gap-[35px] max-w-[700px]">
+      <div className="flex flex-col gap-[35px] xl:w-[500px] lg:w-[500px]">
         <h5 className="text-primary">Join Us</h5>
         <h1 className="text-text">25K+ STUDENTS TRUST US</h1>
         <h4 className="text-secondText">
@@ -25,9 +25,9 @@ const Hero = () => {
       <img
         src={heroImage}
         alt=""
-        className="w-[700px]  absolute right-[200px] top-0"
+        className="lg:block hidden xl:max-w-[600px] lg:max-w-[500px] absolute xl:right-[140px] right-[100px] top-[50px] "
       />
-      <div className="flex items-center justify-between gap-[30px] z-10">
+      <div className="flex items-center justify-between gap-[30px] z-10 flex-wrap">
         <HeroCard
           title="Expert instruction"
           description="The gradual accumulation of 

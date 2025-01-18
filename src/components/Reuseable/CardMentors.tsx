@@ -35,7 +35,7 @@ const CardMentors: React.FC<CardMentorsProps> = ({
   };
 
   return (
-    <div className="flex flex-col rounded-[20px] bg-white accentuedDropShadow overflow-hidden">
+    <div className="flex flex-col rounded-[20px] bg-white accentuedDropShadow overflow-hidden max-w-fit">
       {/* Mentor Image */}
       <img
         src={image}

@@ -54,7 +54,7 @@
 
 @layer utilities {
   section {
-    @apply xl:px-[200px] py-[114px];
+    @apply xl:px-[200px]  lg:px-[100px] md:px-[60px] px-[16px] xl:py-[114px] lg:py-[80px] md:py-[60px] py-[40px];
   }
 }
 

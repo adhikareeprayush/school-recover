@@ -4,7 +4,7 @@ import { FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <section className="grid xl:grid-cols-5 w-full">
+    <section className="grid xl:grid-cols-5 lg:grid-cols-3 gap-[24px] md:grid-cols-3 w-full">
       <div className="col-span-1 flex flex-col gap-[20px]">
         <h5 className="text-text">Company Info</h5>
         <div className="flex flex-col gap-[10px]">

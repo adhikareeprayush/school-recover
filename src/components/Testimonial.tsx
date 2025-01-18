@@ -41,7 +41,7 @@ const Testimonial = () => {
           of Classical physics: Newtonian mechanics
         </p>
       </div>
-      <div className="flex gap-[30px] items-center justify-between">
+      <div className="flex gap-[30px] flex-wrap items-center justify-between">
         {testimonialCards.map((card, index) => (
           <TestimonialCard key={index} {...card} />
         ))}

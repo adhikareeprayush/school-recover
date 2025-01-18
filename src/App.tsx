@@ -1,3 +1,4 @@
+import Bottom from "./components/Bottom";
 import ClientMatters from "./components/ClientMatters";
 import ExpertTeachers from "./components/ExpertTeachers";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ function App() {
       <PopularCourses />
       <WatchCourses />
       <Footer />
+      <Bottom />
     </div>
   );
 }

@@ -58,9 +58,11 @@ const PopularCourses = () => {
           of Classical physics: Newtonian mechanics
         </p>
       </div>
-      <div className="flex gap-[30px] items-center justify-between">
+      <div className="flex flex-wrap gap-[30px] items-center justify-between w-full">
         {mentors.map((card, index) => (
-          <CardMentors key={index} {...card} />
+          <div className="col-span-1" key={index}>
+            <CardMentors {...card} />
+          </div>
         ))}
       </div>
     </section>

@@ -47,7 +47,7 @@ const ExpertTeachers = () => {
           of Classical physics: Newtonian mechanics
         </p>
       </div>
-      <div className="flex items-center gap-[30px] justify-between">
+      <div className="flex flex-wrap items-center gap-[30px] justify-between">
         {teacherCards.map((card, index) => (
           <TeacherCard key={index} {...card} />
         ))}

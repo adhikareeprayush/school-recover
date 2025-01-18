@@ -11,7 +11,7 @@ const WatchCourses = () => {
       </div>
       <form className="flex items-center h-[50px]">
         <input
-          className="w-[500px] bg-[#F9F9F9] rounded-l-[5px] border-[1px] border-[#E6E6E6] px-[15px] py-[15px] border-r-0 text-[14px] font-mont text-secondText placeholder:text-secondText font-normal tracking-wide leading-5 h-full  outline-none focus:outline-none"
+          className="lg:w-[500px] md:w-[300px] w-full  bg-[#F9F9F9] rounded-l-[5px] border-[1px] border-[#E6E6E6] px-[15px] py-[15px] border-r-0 text-[14px] font-mont text-secondText placeholder:text-secondText font-normal tracking-wide leading-5 h-full  outline-none focus:outline-none"
           type="text"
           placeholder="Your Email"
         />
