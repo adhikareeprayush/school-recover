@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <section className="flex items-center justify-between w-full">
+    <nav className="flex items-center justify-between w-full xl:px-[200px] py-[16px] ">
       <h3>Brandname</h3>
       <div className="flex items-center gap-5 text-secondText link text-center">
         <span>Home</span>
@@ -14,7 +14,7 @@ const Nav = () => {
           Join Us -{">"}
         </button>
       </div>
-    </section>
+    </nav>
   );
 };
 
