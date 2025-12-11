@@ -1,50 +1,146 @@
-# React + TypeScript + Vite
+# School - Educational Platform Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page for an educational platform built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+![School Landing Page](./public/vite.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Overview
 
-## Expanding the ESLint configuration
+This is a professional landing page designed for educational institutions, online learning platforms, or training academies. The design emphasizes trust, expertise, and accessibility with a clean, modern aesthetic.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ✨ Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Responsive Design** - Fully responsive layout that works on all devices
+- **Modern UI** - Clean and professional design with consistent styling
+- **Component-Based Architecture** - Reusable React components for maintainability
+- **TypeScript Support** - Full type safety throughout the codebase
+- **Tailwind CSS** - Utility-first CSS framework for rapid styling
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🏗️ Sections
+
+- **Navigation** - Clean header with brand name and navigation links
+- **Hero Section** - Eye-catching hero with statistics and feature cards
+- **Stats Section** - Key metrics showcasing platform success
+- **Client Matters** - Value proposition section
+- **Expert Teachers** - Showcase of course offerings with pricing
+- **Testimonials** - Customer reviews and ratings
+- **Popular Courses** - Team/mentor profiles with social links
+- **Newsletter** - Email subscription section
+- **Footer** - Comprehensive footer with company info and contact details
+- **Features Section** - Platform capabilities and benefits
+- **FAQ Section** - Frequently asked questions
+- **Pricing Section** - Pricing plans and packages
+- **About Section** - Company information and mission
+
+## 🛠️ Tech Stack
+
+- **React 18** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Icons** - Icon library
+- **PostCSS** - CSS transformations
+
+## 🎨 Design System
+
+### Colors
+
+| Color       | Hex       | Usage                              |
+| ----------- | --------- | ---------------------------------- |
+| Primary     | `#96BB7C` | Main brand color, buttons, accents |
+| Danger      | `#E74040` | Alerts, sale badges                |
+| Dark BG     | `#2D4059` | Dark backgrounds                   |
+| Text        | `#252B42` | Primary text                       |
+| Secondary   | `#FFAB71` | Secondary accents                  |
+| Muted       | `#BDBDBD` | Muted text                         |
+| Second Text | `#737373` | Secondary text                     |
+
+### Typography
+
+- **Font Family**: Montserrat
+- **Heading Sizes**: H1 (58px), H2 (40px), H3 (24px), H4 (20px), H5 (16px), H6 (14px)
+- **Body Text**: 14px with proper line height and letter spacing
+
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/adhikareeprayush/school-recover.git
+cd school-recover
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+5. Preview production build:
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/          # Images and SVG assets
+├── components/      # React components
+│   ├── Reuseable/   # Reusable component library
+│   │   ├── CardMentors.tsx
+│   │   ├── HeroCard.tsx
+│   │   ├── TeacherCard.tsx
+│   │   └── TestimonialCard.tsx
+│   ├── Nav.tsx
+│   ├── Hero.tsx
+│   ├── Stats.tsx
+│   ├── ClientMatters.tsx
+│   ├── ExpertTeachers.tsx
+│   ├── Testimonial.tsx
+│   ├── PopularCourses.tsx
+│   ├── WatchCourses.tsx
+│   ├── Features.tsx
+│   ├── FAQ.tsx
+│   ├── Pricing.tsx
+│   ├── About.tsx
+│   ├── Footer.tsx
+│   └── Bottom.tsx
+├── App.tsx          # Main app component
+├── main.tsx         # Entry point
+└── index.css        # Global styles
+```
+
+## 🚀 Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+- **Prayush Adhikari** - [@adhikareeprayush](https://github.com/adhikareeprayush)
+
+---
+
+Made with ❤️ for education
