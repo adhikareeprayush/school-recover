@@ -2,7 +2,6 @@
 
 A modern, responsive landing page for an educational platform built with React, TypeScript, and Tailwind CSS.
 
-![School Landing Page](./public/vite.svg)
 
 ## 🎯 Overview
 
